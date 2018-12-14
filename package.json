@@ -1,0 +1,13 @@
+{
+  "name": "trello-effort-impact-power-up",
+  "version": "0.0.1",
+  "repository": "https://github.com/theideabureau/trello-effort-impact-power-up",
+  "author": "Ben Everard <hello@beneverard.co.uk>",
+  "license": "MIT",
+  "scripts": {
+	"deploy": "gh-pages -d ."  
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}
