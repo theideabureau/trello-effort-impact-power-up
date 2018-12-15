@@ -5,7 +5,8 @@
   "author": "Ben Everard <hello@beneverard.co.uk>",
   "license": "MIT",
   "scripts": {
-	"deploy": "gh-pages -d ."  
+	"help": "gh-pages --help",
+	"deploy": "gh-pages -d . -v node_modules"
   },
   "devDependencies": {
     "gh-pages": "^2.0.1"
