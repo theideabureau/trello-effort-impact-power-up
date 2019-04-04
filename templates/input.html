@@ -1,0 +1,48 @@
+<html>
+
+	<head>
+
+		<link rel="stylesheet" href="https://p.trellocdn.com/power-up.min.css">
+
+		<style>
+		
+			select { height: 30px; }
+
+			label {
+				font-weight: 500;
+				cursor: pointer;
+			}
+
+		</style>
+
+		<script src="https://p.trellocdn.com/power-up.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<form id="estimate">
+
+			<label for="effort">Effort:</label>
+
+			<select name="effort" id="effort">
+				<option value="1">Low</option>
+				<option value="2">High</option>
+			</select>
+
+			<label for="impact">Impact:</label>
+
+			<select name="impact" id="impact">
+				<option value="1">Low</option>
+				<option value="2">High</option>
+			</select>
+
+			<button type="submit" class="mod-primary">Save</button>
+
+		</form>
+
+		<script src="../dist/input.js"></script>
+
+	</body>
+
+</html>
