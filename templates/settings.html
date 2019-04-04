@@ -1,0 +1,91 @@
+<html>
+
+	<head>
+
+		<link rel="stylesheet" href="https://p.trellocdn.com/power-up.min.css">
+
+		<style>
+
+			[id="settings"] label {
+				font-weight: 500;
+				cursor: pointer;
+			}
+
+			.eiSettingsTable {
+				display: grid;
+				grid-template-columns: 20px 1fr 1fr;
+				grid-template-rows: 1fr 1fr 20px;
+				grid-gap: 8px;
+			}
+
+			.eiSettingsTable__impact {
+				grid-column: 1;
+				grid-row: 1 / 3;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.eiSettingsTable__impact > div {
+				transform: rotate(270deg);
+  				white-space: nowrap;
+			}
+
+			.eiSettingsTable__effort {
+				grid-column: 2 / 4;
+				grid-row: 3;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.eiSettingsTable__cell input {
+				margin: 0;
+			}
+
+		</style>
+
+		<script src="https://p.trellocdn.com/power-up.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<form id="settings">
+
+			<h3>Score labels</h3>
+			<p>Set your own labels for each effort / impact score:</p>
+
+			<div class="eiSettingsTable">
+
+				<div class="eiSettingsTable__impact"><div><span>Impact &#10140;</span></div></div>
+
+				<div class="eiSettingsTable__effort"><div><span>Effort &#10140;</span></div></div>
+
+				<div class="eiSettingsTable__cell">
+					<input type="text" name="score_1" id="score_1" placeholder="Quick win">
+				</div>
+
+				<div class="eiSettingsTable__cell">
+					<input type="text" name="score_2" id="score_2" placeholder="Major project">
+				</div>
+
+				<div class="eiSettingsTable__cell">
+					<input type="text" name="score_3" id="score_3" placeholder="Fill in job">
+				</div>
+
+				<div class="eiSettingsTable__cell">
+					<input type="text" name="score_4" id="score_4" placeholder="Thankless task">
+				</div>
+
+			</div>
+
+			<button type="submit" class="mod-primary">Save</button>
+
+		</form>
+
+		<script src="../dist/settings.js"></script>
+
+	</body>
+
+</html>
