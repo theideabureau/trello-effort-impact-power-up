@@ -1,6 +1,6 @@
 # Effort / Impact Trello Power-Up 🚀
 
-Version: 1.0.0
+Version: 1.0.1
 
 This is a Trello Power-up to add some basic Effort / Impact functionality to your cards.
 
