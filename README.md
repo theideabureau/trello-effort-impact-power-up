@@ -1,5 +1,7 @@
 # Effort / Impact Trello Power-Up 🚀
 
+Version: 1.0.0
+
 This is a Trello Power-up to add some basic Effort / Impact functionality to your cards.
 
 The Effort / Impact scale, sometimes known by other terms, is a technique to prioritise tasks, more information about that here:
