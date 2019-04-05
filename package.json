@@ -1,11 +1,11 @@
 {
   "name": "trello-effort-impact-power-up",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "repository": "https://github.com/theideabureau/trello-effort-impact-power-up",
   "author": "Ben Everard <ben@theideabureau.co>",
   "license": "MIT",
   "scripts": {
-    "deploy": "gh-pages -d .",
+    "deploy": "yarn run production && echo && echo \"Deploying to Github Pages...\" && gh-pages -d .",
     "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
