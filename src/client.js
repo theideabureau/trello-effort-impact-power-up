@@ -14,7 +14,7 @@ TrelloPowerUp.initialize({
 
 		return t.popup({
 			title: 'Effort / Impact Settings',
-			url: '../templates/settings.html',
+			url: './templates/settings.html',
 			height: 184 // we can always resize later
 		});
 
@@ -55,7 +55,7 @@ TrelloPowerUp.initialize({
 
 				return t.popup({
 					title: "Effort / Impact",
-					url: '../templates/input.html'
+					url: './templates/input.html'
 				});
 
 			}
@@ -81,7 +81,7 @@ TrelloPowerUp.initialize({
 
 								return t.popup({
 									title: "Effort / Impact",
-									url: '../templates/input.html'
+									url: './templates/input.html'
 								});
 
 							}
@@ -93,7 +93,7 @@ TrelloPowerUp.initialize({
 
 								return t.popup({
 									title: "Effort / Impact",
-									url: '../templates/input.html'
+									url: './templates/input.html'
 								});
 
 							}
