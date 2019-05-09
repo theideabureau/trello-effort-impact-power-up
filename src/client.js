@@ -1,6 +1,6 @@
 /* global TrelloPowerUp */
 
-import {eiValues, eiScoreLabel, eiCardDataValidator, eiSortCards} from './functions.js'
+import {eiValues, eiScoreLabel, eiCardDataValidator, eiSortCards, eiSettings} from './functions.js'
 
 var Promise = TrelloPowerUp.Promise;
 
@@ -22,23 +22,49 @@ TrelloPowerUp.initialize({
 
 	'card-badges': function(t, opts) {
 
-		return t.get('card', 'shared', 'effort-impact')
-		.then(card_data => {
+		return eiSettings(t)
+		.then(settings => {
 
-			return eiScoreLabel(t, card_data.effort, card_data.impact)
-			.then(score_label => {
+			// there is no point in fetching any more data if we're not doing to display
+			if ( settings.card_front_display.effort_impact === false && settings.card_front_display.score === false ) {
+				return;
+			}
 
-				if ( eiCardDataValidator(card_data) ) {
+			return t.get('card', 'shared', 'effort-impact')
+			.then(card_data => {
 
-					return [{
-						text: 'Effort: ' + eiValues(card_data.effort)
-					}, {
-						text: 'Impact: ' + eiValues(card_data.impact)
-					}, {
-						text: 'Score: ' + score_label
-					}];
+				return eiScoreLabel(t, card_data.effort, card_data.impact)
+				.then(score_label => {
 
-				}
+					if ( eiCardDataValidator(card_data) ) {
+
+						let badges = [];
+
+						if ( settings.card_front_display.effort_impact === true ) {
+
+							badges.push({
+								text: 'Effort: ' + eiValues(card_data.effort)
+							});
+
+							badges.push({
+								text: 'Impact: ' + eiValues(card_data.impact)
+							});
+
+						}
+
+						if ( settings.card_front_display.score === true ) {
+
+							badges.push({
+								text: 'Score: ' + score_label
+							});
+
+						}
+
+						return badges;
+
+					}
+
+				});
 
 			});
 

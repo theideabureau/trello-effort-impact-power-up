@@ -1,6 +1,7 @@
 'use strict';
 
 import forEach from 'lodash.foreach';
+import merge from 'lodash.merge';
 
 var Promise = TrelloPowerUp.Promise;
 
@@ -28,8 +29,10 @@ export function eiScoreLabelDefaults() {
 
 export function eiScoreLabels(t) {
 
-	return t.get('board', 'private', 'labels')
-	.then(labels => {
+	return eiSettings(t)
+	.then(settings => {
+
+		let labels = settings.labels;
 
 		// if there is no labels, return the defaults
 		if ( typeof labels === 'undefined' ) {
@@ -45,9 +48,31 @@ export function eiScoreLabels(t) {
 			}
 
 		});
-
+		
 		return labels;
 
+	});
+
+}
+
+export function eiSettings(t) {
+
+	const default_settings = {
+		card_front_display: {
+			effort_impact: true,
+			score: true
+		},
+		labels: {
+			1: '',
+			2: '',
+			3: '',
+			4: ''
+		}
+	};
+
+	return t.get('board', 'private', 'settings', {})
+	.then(settings => {
+		return merge(default_settings, settings);
 	});
 
 }
