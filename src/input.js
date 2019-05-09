@@ -29,10 +29,10 @@ t.render(function() {
 
 		window.effort.value = data.effort;
 		window.impact.value = data.impact;
-		
+
 	})
 	.then(function(){
-		t.sizeTo('#estimate').done();
+		t.sizeTo('#estimate');
 	});
 
 });

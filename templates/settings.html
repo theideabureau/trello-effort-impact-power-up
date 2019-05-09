@@ -6,6 +6,10 @@
 
 		<style>
 
+			[id="settings"] {
+				margin-bottom: 0;
+			}
+
 			[id="settings"] label {
 				font-weight: 500;
 				cursor: pointer;
@@ -53,7 +57,23 @@
 
 		<form id="settings">
 
-			<h3>Score labels</h3>
+			<h3>Options:</h3>
+
+			<p>Select which data to display on the front:</p>
+
+			<label>
+				<input type="checkbox" id="ei__cf_effort_impact">
+				<span>Display effort / impact values</span>
+			</label>
+
+			<label>
+				<input type="checkbox" id="ei__cf_score">
+				<span>Display score</span>
+			</label>
+
+			<br />
+
+			<h3>Score labels:</h3>
 			<p>Set your own labels for each effort / impact score:</p>
 
 			<div class="eiSettingsTable">
@@ -63,19 +83,19 @@
 				<div class="eiSettingsTable__effort"><div><span>Effort &#10140;</span></div></div>
 
 				<div class="eiSettingsTable__cell">
-					<input type="text" name="score_1" id="score_1" placeholder="Quick win">
+					<input type="text" id="ei__score_1" placeholder="Quick win">
 				</div>
 
 				<div class="eiSettingsTable__cell">
-					<input type="text" name="score_2" id="score_2" placeholder="Major project">
+					<input type="text" id="ei__score_2" placeholder="Major project">
 				</div>
 
 				<div class="eiSettingsTable__cell">
-					<input type="text" name="score_3" id="score_3" placeholder="Fill in job">
+					<input type="text" id="ei__score_3" placeholder="Fill in job">
 				</div>
 
 				<div class="eiSettingsTable__cell">
-					<input type="text" name="score_4" id="score_4" placeholder="Thankless task">
+					<input type="text" id="ei__score_4" placeholder="Thankless task">
 				</div>
 
 			</div>
