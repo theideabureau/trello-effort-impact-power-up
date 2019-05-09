@@ -35,7 +35,7 @@ t.render(function() {
 
 	})
 	.then(function(){
-		t.sizeTo('#settings').done();
+		t.sizeTo('#settings');
 	});
 
 });
