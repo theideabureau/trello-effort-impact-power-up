@@ -12,6 +12,7 @@
     "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "laravel-mix": "^4.0.15",
     "lodash.foreach": "^4.5.0",
     "lodash.merge": "^4.6.1",
